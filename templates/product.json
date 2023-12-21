@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "38017866-c301-46e9-98a1-269a67f8d636": {
+          "type": "text",
+          "settings": {
+            "text": "良質なペカンナッツをこんがりローストし、キャラメルパウダーで包み込みました",
+            "text_style": "body"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "e1588af3-11fb-416b-8cb2-016ba73eee0f": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "recycle",
+            "image_1": "shopify:\/\/shop_images\/envelope-regular.png",
+            "heading_1": "この商品について問い合わせる",
+            "icon_2": "return",
+            "image_2": "shopify:\/\/shop_images\/gift-solid.png",
+            "heading_2": "ギフトラッピングについて",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
+        "4610729b-b7e3-421b-b440-138464d5fbbe": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "内容・サイズ",
+            "icon": "none",
+            "content": "<p>【 保存方法 】直射日光、高温多湿を避けて保存。<br\/>【 賞味期限 】製造から60日。パッケージ裏面に記載<br\/><\/p>",
+            "page": "contact"
+          }
+        },
+        "a47fd516-c8d7-43cc-9990-8263d6f115f8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "原材料・アレルギー説明",
+            "icon": "none",
+            "content": "<p>【 保存方法 】直射日光、高温多湿を避けて保存。<br\/>【 賞味期限 】製造から60日。パッケージ裏面に記載<\/p>",
+            "page": ""
+          }
+        },
+        "b1bdf602-c347-443b-9eb4-a71da425ab00": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "保存方法・賞味期限",
+            "icon": "none",
+            "content": "<p>【 保存方法 】直射日光、高温多湿を避けて保存。<br\/>【 賞味期限 】製造から60日。パッケージ裏面に記載<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "38017866-c301-46e9-98a1-269a67f8d636",
+        "buy_buttons",
+        "description",
+        "e1588af3-11fb-416b-8cb2-016ba73eee0f",
+        "4610729b-b7e3-421b-b440-138464d5fbbe",
+        "a47fd516-c8d7-43cc-9990-8263d6f115f8",
+        "b1bdf602-c347-443b-9eb4-a71da425ab00"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "background-1",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "関連商品",
+        "heading_size": "h2",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}

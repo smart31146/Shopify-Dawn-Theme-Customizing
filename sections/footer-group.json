@@ -1,0 +1,63 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "4039ffa0-3fa0-41fb-996e-582592f5eeca": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-tate-white.png",
+            "image_width": 180,
+            "alignment": ""
+          }
+        },
+        "82aa35a8-746f-470a-82e9-1772a748819c": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>特定商取引法に基づく表示<\/p><p>- 決済方法<br\/>- 送料<br\/>- 配送<br\/>- 返品・交換<\/p><p><\/p>"
+          }
+        },
+        "0ed9aba5-42a7-4942-bf50-5ea295b676d9": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>ギフト包装に関しまして<br\/>よくあるご質問／FAQ<br\/>お問い合わせ<br\/>プライバシーポリシー<br\/><\/p>"
+          }
+        },
+        "bc6a4d96-7543-410a-86ac-089a05477191": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>お知らせ一覧<br\/>ブランドサイト（店舗情報）<br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "4039ffa0-3fa0-41fb-996e-582592f5eeca",
+        "82aa35a8-746f-470a-82e9-1772a748819c",
+        "0ed9aba5-42a7-4942-bf50-5ea295b676d9",
+        "bc6a4d96-7543-410a-86ac-089a05477191"
+      ],
+      "settings": {
+        "color_scheme": "accent-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 84,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

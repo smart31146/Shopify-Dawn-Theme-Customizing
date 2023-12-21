@@ -1,0 +1,34 @@
+.multirow-collection-title {
+    padding: 0 !important;
+}
+.card__content {
+    text-align: center;
+}
+.multirow-collection-title .collection__title{
+    display: flex;
+    gap: 3rem;
+}
+.multirow-collection-title .product__text {
+    display: flex;
+}
+.multirow-collection-link {
+    display: flex;
+    align-items: center;
+}
+.multirow-collection-link a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+.multirow-collection-link-img {
+    display: flex;
+    align-items: center;
+}
+.card-information {
+    text-align: center !important;
+}
+@media screen and (min-width: 750px){
+.multirow-collection__inner {
+    row-gap: calc(var(--grid-desktop-vertical-spacing)*15);
+}
+}
