@@ -142,7 +142,12 @@
                     >
                       <div>
                         <span class="facets__summary-label">
+                          {%- if filter.label == '商品タイプ' -%}
+                            カテゴリーで探す
+                          {%- else -%}
                           {{- filter.label | escape }}
+                            {%- endif -%}
+
                           {%- if filter_type == 'vertical' -%}
                             <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
                               ({{ filter.active_values.size }})</span

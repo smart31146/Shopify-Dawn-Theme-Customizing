@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@700;800;900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap');
+@font-face {
+  font-family: 'YuGothic';
+  src: url('https://cdn.shopify.com/s/files/1/0639/2827/1032/files/yugothib.ttf?v=1703181238') format('truetype');
+       
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
@@ -18,7 +26,16 @@
   --image-padding: var(--product-card-image-padding);
   --text-alignment: var(--product-card-text-alignment);
 }
-
+.product-form__submit span{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.product-form__submit span svg{
+    width: 30px;
+    margin: 2px 4px 0 0; 
+}
 .collection-card-wrapper .card,
 .contains-card--collection {
   --border-radius: var(--collection-card-corner-radius);
@@ -259,7 +276,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  font-family: var(--font-body-family);
+  /* font-family: var(--font-body-family); */
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
 }
@@ -275,7 +292,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: var(--font-heading-family);
+  font-family: 'Noto Serif JP', serif;
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
@@ -300,19 +317,19 @@ h5,
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
+    font-size: calc(var(--font-heading-scale) * 4.2rem);
   }
 }
 
 h1,
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
+  font-size: calc(var(--font-heading-scale) * 2.6rem);
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: calc(var(--font-heading-scale) * 2.6rem);
   }
 }
 
@@ -503,7 +520,7 @@ h6:empty {
   color: rgb(var(--color-link));
   background-color: transparent;
   font-size: 1.4rem;
-  font-family: inherit;
+  font-family: 'Noto Serif JP', serif;
 }
 
 .link--text {
@@ -2554,7 +2571,10 @@ product-info .loading__spinner:not(.hidden) ~ *,
 .header__icon {
   color: rgb(var(--color-foreground));
 }
-
+.header__icon img{
+  width: 20px !important;
+  height: 20px !important;
+}
 .header__icon span {
   height: 100%;
 }

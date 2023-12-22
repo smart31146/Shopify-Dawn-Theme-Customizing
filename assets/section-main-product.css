@@ -5,7 +5,10 @@
 .product.grid {
   gap: 0;
 }
-
+/* .product__description {
+  margin-top: 42px;
+  width: 50%;
+} */
 .product--no-media {
   max-width: 57rem;
   margin: 0 auto;

@@ -8,6 +8,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/1.png",
             "heading": "スイートポテト",
+            "text_color": "black",
             "heading_size": "h2",
             "subheading": "まるくて、優しい甘さに仕上げました。かわいらしい化粧箱も贈り物に人気です。",
             "button_label": "詳しく見る",
@@ -26,10 +27,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/231201_7331.png",
             "heading": "コンフィチュール",
+            "text_color": "white",
             "heading_size": "h2",
             "subheading": "まるくて、優しい甘さに仕上げました。かわいらしい化粧箱も贈り物に人気です。",
             "button_label": "詳しく見る",
-            "link": "",
+            "link": "shopify:\/\/products\/柚子最中-個化粧箱入り",
             "button_style_secondary": true,
             "box_align": "bottom-left",
             "show_text_box": true,
@@ -44,10 +46,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/231201_7065.png",
             "heading": "コンフィチュール",
+            "text_color": "black",
             "heading_size": "h2",
             "subheading": "まるくて、優しい甘さに仕上げました。かわいらしい化粧箱も贈り物に人気です。",
             "button_label": "詳しく見る",
-            "link": "",
+            "link": "shopify:\/\/products\/柚子最中-個化粧箱入り-6",
             "button_style_secondary": true,
             "box_align": "bottom-left",
             "show_text_box": true,
@@ -329,60 +332,6 @@
         "padding_bottom": 36
       }
     },
-    "4737d026-0b66-473b-8645-8a5d9795d7be": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--16398062715064__4737d026-0b66-473b-8645-8a5d9795d7be-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "お支払い方法",
-            "text": "<p>各種クレジットカードのほか、PAYPAY、冷凍商品に関しましては代金引換もご利用いただけます。<\/p>",
-            "link_label": "詳しくはこちら",
-            "link": ""
-          }
-        },
-        "template--16398062715064__4737d026-0b66-473b-8645-8a5d9795d7be-column-2": {
-          "type": "column",
-          "settings": {
-            "title": "ギフト包装につきまして",
-            "text": "<p>ギフト包装をご希望のお客様はお買い物カートの画面にてお選びいただけます。またショッピングバッグ各種は有料でご用意しております。<\/p>",
-            "link_label": "詳しくはこちら",
-            "link": ""
-          }
-        },
-        "template--16398062715064__4737d026-0b66-473b-8645-8a5d9795d7be-column-3": {
-          "type": "column",
-          "settings": {
-            "title": "配送方法",
-            "text": "<p>ゆうパックでのお届けとなります。基本は常温での配送となりますが、一部冷蔵・冷凍商品が含まれる場合は通常配送料プラス675円がかかります。<\/p>",
-            "link_label": "詳しくはこちら",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16398062715064__4737d026-0b66-473b-8645-8a5d9795d7be-column-1",
-        "template--16398062715064__4737d026-0b66-473b-8645-8a5d9795d7be-column-2",
-        "template--16398062715064__4737d026-0b66-473b-8645-8a5d9795d7be-column-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "half",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 24,
-        "padding_bottom": 0
-      }
-    },
     "37702c5e-72b6-41bb-b1b9-fd07426df30c": {
       "type": "multicolumn-rect",
       "blocks": {
@@ -443,7 +392,6 @@
     "507ec5e5-f3db-4acf-8253-80f7aab3e665",
     "94cf9aa8-214e-4a10-a940-e7af039a9b56",
     "3188c66c-0383-42a2-9f1c-b724cfb4840a",
-    "4737d026-0b66-473b-8645-8a5d9795d7be",
     "37702c5e-72b6-41bb-b1b9-fd07426df30c"
   ]
 }

@@ -2,6 +2,9 @@
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+.collection-hero__title{
+  margin-top:0;
+}
   .collection-hero {
     margin-top: 100px;
     text-align: center;
@@ -16,6 +19,10 @@
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <div class="collection-hero__text-wrapper">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/0639/2827/1032/files/logo-mark.png?v=1703175863"/>
+        
+      </div>
       <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
@@ -54,6 +61,11 @@
   "name": "t:sections.main-collection-banner.name",
   "class": "section",
   "settings": [
+    {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.multicolumn-rect.blocks.column.settings.image.label"
+        },
     {
       "type": "paragraph",
       "content": "t:sections.main-collection-banner.settings.paragraph.content"

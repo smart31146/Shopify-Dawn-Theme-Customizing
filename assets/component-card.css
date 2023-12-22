@@ -140,7 +140,9 @@
   width: 100%;
   flex-grow: 1;
 }
-
+.card__content a, span{
+  font-family: 'YuGothic', sans-serif;
+}
 .card__content--auto-margins {
   grid-template-rows: minmax(0, auto) max-content minmax(0, auto);
 }

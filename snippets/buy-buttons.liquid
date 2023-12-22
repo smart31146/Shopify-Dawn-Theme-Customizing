@@ -88,7 +88,13 @@
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
+                {% comment %} {{ 'products.product.add_to_cart' | t }} {% endcomment %}
+                {% comment %} {%- liquid  render 'icon-cart'  -%}  {% endcomment %}
+                <img class="icon icon-cart" aria-hidden="true" focusable="false" src="https://cdn.shopify.com/s/files/1/0639/2827/1032/files/Group_233.png?v=1703210663">
+              <p>
                 {{ 'products.product.add_to_cart' | t }}
+                
+                </p>
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}

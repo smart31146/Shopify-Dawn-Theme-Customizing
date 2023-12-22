@@ -242,7 +242,17 @@
   font-size: inherit;
   margin-top: 1.5rem;
 }
-
+.multicolumn-card__info .link, p {
+  font-family: 'YuGothic', sans-serif;
+  font-size: 1.5rem;
+}
+.multicolumn-card__info h3{
+  font-family: 'YuGothic', sans-serif;
+  font-size: 2.6rem;
+}
+.multicolumn .multicolumn-card__info h3{
+  font-size: 1.5rem;
+}
 .multicolumn-card__info .icon-wrap {
   margin-left: 0.8rem;
   white-space: nowrap;

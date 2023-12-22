@@ -140,10 +140,64 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "5c41f5a1-57e8-403b-95aa-8860e08fb48a": {
+      "type": "multicolumn-rect",
+      "blocks": {
+        "template--16398062878904__5c41f5a1-57e8-403b-95aa-8860e08fb48a-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "お支払い方法",
+            "text": "<p>各種クレジットカードのほか、PAYPAY、冷凍商品に関しましては代金引換もご利用いただけます。<\/p>",
+            "link_label": "詳しくはこちら",
+            "link": ""
+          }
+        },
+        "template--16398062878904__5c41f5a1-57e8-403b-95aa-8860e08fb48a-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "ギフト包装につきまして",
+            "text": "<p>ギフト包装をご希望のお客様はお買い物カートの画面にてお選びいただけます。またショッピングバッグ各種は有料でご用意しております。<\/p>",
+            "link_label": "詳しくはこちら",
+            "link": ""
+          }
+        },
+        "template--16398062878904__5c41f5a1-57e8-403b-95aa-8860e08fb48a-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "配送方法",
+            "text": "<p>ゆうパックでのお届けとなります。基本は常温での配送となりますが、一部冷蔵・冷凍商品が含まれる場合は通常配送料プラス675円がかかります。<\/p>",
+            "link_label": "詳しくはこちら",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16398062878904__5c41f5a1-57e8-403b-95aa-8860e08fb48a-column-1",
+        "template--16398062878904__5c41f5a1-57e8-403b-95aa-8860e08fb48a-column-2",
+        "template--16398062878904__5c41f5a1-57e8-403b-95aa-8860e08fb48a-column-3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "5c41f5a1-57e8-403b-95aa-8860e08fb48a"
   ]
 }

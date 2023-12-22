@@ -5,6 +5,13 @@
   {% render 'header-dropdown-menu' %}
 {% endcomment %}
 
+{%- style -%}
+
+    .header__inline-menu a{
+      font-family: 'YuGothic', sans-serif;
+      font-size: 1.5rem;
+    }
+{%- endstyle-%}
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}

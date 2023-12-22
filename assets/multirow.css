@@ -4,6 +4,7 @@
 .card__content {
     text-align: center;
 }
+
 .multirow-collection-title .collection__title{
     display: flex;
     gap: 3rem;
@@ -16,6 +17,7 @@
     align-items: center;
 }
 .multirow-collection-link a {
+    font-family: 'Noto Serif JP', serif;
     text-decoration: none;
     color: black;
     font-size: 1.5rem;

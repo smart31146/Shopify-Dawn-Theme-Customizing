@@ -1,9 +1,38 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
-
+{%- style -%}
+.slideshow__text .banner__buttons a{
+  color:black;
+}
+  .banner__text p{
+      font-size: 1.8rem;
+      font-family: 'Noto Serif JP', serif;
+    }
+    .banner__heading {
+      font-size: 2.6rem
+    }
+    .banner__buttons a{
+      font-family: 'YuGothic', sans-serif;
+      font-size: 1.8rem;
+      
+    }
+    .black {
+      color: black;
+    }
+    .white {
+      color: white;
+    }
+    .black p {
+      color: black;
+    }
+    .white p {
+      color: white;
+    }
+{%- endstyle-%}
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
+    
     @media screen and (max-width: 749px) {
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before,
@@ -168,12 +197,12 @@
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
+              <h1 class="banner__heading inline-richtext {{ block.settings.heading_size }} {{ block.settings.text_color }}">
                 {{ block.settings.heading }}
-              </h2>
+              </h1>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
-              <div class="banner__text rte" {{ block.shopify_attributes }}>
+              <div class="banner__text rte {{ block.settings.text_color }}" {{ block.shopify_attributes }}>
                 <p>{{ block.settings.subheading }}</p>
               </div>
             {%- endif -%}
@@ -418,6 +447,22 @@
           "id": "heading",
           "default": "Image slide",
           "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "text_color",
+          "options": [
+            {
+              "value": "black",
+              "label": "black"
+            },
+            {
+              "value": "white",
+              "label": "white"
+            }
+          ],
+          "default": "black",
+          "label": "Text color"
         },
         {
           "type": "select",

@@ -69,18 +69,19 @@
                   {{ compare_at_price | money }}
                 {% endif %}
               </s>
+              （税込）
             </span>
           {%- endunless -%}
         {%- endif -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span class="price-item price-item--regular">
           {{- 'products.product.volume_pricing.price_range' | t: minimum: money_price_min, maximum: money_price_max -}}
-        </span>
+        </span>（税込）
       {%- else -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span class="price-item price-item--regular">
           {{ money_price }}
-        </span>
+        </span>（税込）
       {%- endif -%}
     </div>
     <div class="price__sale">
@@ -93,7 +94,7 @@
             {% else %}
               {{ compare_at_price | money }}
             {% endif %}
-          </s>
+          </s>（税込）
         </span>
       {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>

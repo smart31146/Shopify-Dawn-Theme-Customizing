@@ -14,6 +14,9 @@
   {%- endif -%}
 
   {%- style -%}
+    .product {
+      margin-top: 100px;
+    }
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -109,14 +112,14 @@
                   <span>{{ 'products.product.volume_pricing.note' | t }}</span>
                 </div>
               {%- endif -%}
-                <div class="product__tax caption rte">
+                {% comment %} <div class="product__tax caption rte">
                   {%- if cart.taxes_included -%}
                     {{ 'products.product.include_taxes' | t }}
                   {%- endif -%}
                   {%- if shop.shipping_policy.body != blank -%}
                     {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                   {%- endif -%}
-                </div>
+                </div> {% endcomment %}
               <div {{ block.shopify_attributes }}>
                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                 {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -171,12 +174,7 @@
                   {%- endif -%}
                 {%- endif -%}
               </p>
-            {%- when 'description' -%}
-              {%- if product.description != blank -%}
-                <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                  {{ product.description }}
-                </div>
-              {%- endif -%}
+            
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -575,7 +573,7 @@
       </div>
     </modal-dialog>
   {%- endfor -%}
-
+ 
   {%- if product.media.size > 0 -%}
     <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
@@ -668,6 +666,25 @@
     }
   </script>
   </div>
+  <div class="page-width">
+   {% comment %} {%- when 'description' -%} {% endcomment %}
+   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <product-info
+      id="ProductInfo-{{ section.id }}"
+      data-section="{{ section.id }}"
+      data-url="{{ product.url }}"
+      class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
+    >
+    {%- if product.description != blank -%}
+      <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+        {{ product.description }}
+      </div>
+    {%- endif -%}
+    </product-info>
+    </div>
+    </div>
+    </div>
 </section>
 
 {% schema %}
