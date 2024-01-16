@@ -11,20 +11,8 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-  .related-products__heading
-    {
-      text-align: center;
-      font-family: '游ゴシック', sans-serif;
-      font-size: 2.6rem;
-    }
-    .related-products .card__content a, span {
-      font-family: 'Yu Gothic', sans-serif;
-    }
+
   @media screen and (min-width: 750px) {
-    .related-products {
-      max-width: 1130px !important;
-    }
-    
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -32,7 +20,7 @@
   }
 {%- endstyle -%}
 
-<div class="custom-container color-{{ section.settings.color_scheme }} gradient no-js-hidden">
+<div class="color-{{ section.settings.color_scheme }} gradient no-js-hidden">
   <product-recommendations
     class="related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
@@ -67,7 +55,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.related-products.name",
+  "name": "t:sections.related-products-new.name",
   "tag": "section",
   "class": "section",
   "settings": [

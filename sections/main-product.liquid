@@ -17,12 +17,61 @@
     .product {
       margin-top: 100px;
     }
+    .product-custom-container {
+      max-width: 1130px;
+    }
+    .product__info-wrapper-custom .product__text {
+      font-size: 1.4rem;
+    }
+    .product__info-wrapper-custom .price-item{
+      font-size: 2.6rem;
+      font-weight: bold;
+    }
+    .product__info-wrapper-custom .product-form__buttons p{
+      font-size: 1.6rem;
+    }
+    .product__info-wrapper-custom .price__regular {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    .product__info-wrapper-custom .icon-with-text__item span {
+      font-size: 1.5rem;
+      font-family: 'YuGothic', sans-serif;
+    }
+    .product__info-wrapper-custom .accordion__title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      font-family: 'Noto Serif JP', serif;
+    }
+    .product__info-wrapper-custom .accordion__content p{
+      font-size: 1.4rem;
+      font-family: 'YuGothic', sans-serif;
+    }
+    .product__description h2{
+      font-size: 2rem;
+    }
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
     @media screen and (min-width: 750px) {
+      .product__media-wrapper-custom {
+        max-width: 55% !important;
+        width: 55% !important;
+      }
+      .product-sub-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .product__info-wrapper-custom {
+        max-width: 38% !important;
+        width: 38% !important;
+        padding: 0 !important;
+      }
+      .product__info-wrapper-description {
+        padding: 0;
+      }
       .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -64,12 +113,12 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-  <div class="page-width">
-    <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-    <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
+  <div class="page-width product-custom-container">
+    <div class="product product-sub-container product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    <div class="grid__item product__media-wrapper product__media-wrapper-custom {% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'product-media-gallery', variant_images: variant_images %}
     </div>
-    <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="product__info-wrapper product__info-wrapper-custom grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <product-info
         id="ProductInfo-{{ section.id }}"
         data-section="{{ section.id }}"
@@ -136,6 +185,7 @@
               >
                 {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
                   {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
+                    
                     {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold -%}
                       <svg width="15" height="15" aria-hidden="true">
                         <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(238,148,65, 0.3)"/>
@@ -159,6 +209,7 @@
                     {%- endif -%}
                   {%- else -%}
                     {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+                      
                       <svg width="15" height="15" aria-hidden="true">
                         <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
                         <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
@@ -204,6 +255,7 @@
                   </div>
                 </details>
               </div>
+             
             {%- when 'quantity_selector' -%}
               <div
                 id="Quantity-Form-{{ section.id }}"
@@ -214,6 +266,7 @@
                 {% # theme-check-disable %}
                 {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
                 {% # theme-check-enable %}
+               
                 <label class="quantity__label form__label" for="Quantity-{{ section.id }}">
                   {{ 'products.product.quantity.label' | t }}
                   <span class="quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}">
@@ -573,7 +626,7 @@
       </div>
     </modal-dialog>
   {%- endfor -%}
- 
+  
   {%- if product.media.size > 0 -%}
     <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
@@ -666,10 +719,10 @@
     }
   </script>
   </div>
-  <div class="page-width">
+  <div class="page-width product-custom-container">
    {% comment %} {%- when 'description' -%} {% endcomment %}
    <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-  <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="product__info-wrapper product__info-wrapper-description grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <product-info
       id="ProductInfo-{{ section.id }}"
       data-section="{{ section.id }}"

@@ -82,7 +82,7 @@ cart-items .title-wrapper-with-link {
 }
 
 .cart-item__name:hover {
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.3rem;
   text-decoration-thickness: 0.2rem;
 }

@@ -6,6 +6,9 @@
   border-bottom: 1px solid #707070;
   border-top: 1px solid #707070;
 }
+.multicolumn-rect .page-width {
+  padding: 0 !important;
+}
 .multicolumn-rect .multicolumn-list {
   gap: 0;
 }
@@ -17,18 +20,25 @@
   background-color: #F9F8FF;
 }
 .multicolumn-rect .multicolumn-card {
+  height: 100%;
   background: #F9F8FF;
 }
 .multicolumn-rect .multicolumn-card__info {
-  padding: 6.5rem 2.5rem;
+  padding: 6.5rem 3.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.multicolumn-rect li {
-  border-left: 1px solid #707070;
+.multicolumn-rect .multicolumn-card__info .rte p{
+  text-align: left;
 }
 .multicolumn-rect li:last-child {
-  border-right: 1px solid #707070;
+  border-right: none;
 }
-
+.multicolumn-rect li:first-child {
+  border-left: none;
+}
 .multicolumn .title {
   margin: 0;
 }
@@ -77,6 +87,9 @@
 }
 
 @media screen and (min-width: 750px) {
+  .multicolumn-rect li {
+    border-left: 1px solid #707070;
+  }
   .multicolumn .button {
     margin-top: 4rem;
   }

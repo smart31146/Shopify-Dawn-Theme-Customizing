@@ -103,7 +103,7 @@ product-recommendations.is-accordion + .accordion {
 }
 
 .complementary-products-contains-quick-add .card__heading:hover a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .complementary-products__container .card--card .card__inner .card__media {

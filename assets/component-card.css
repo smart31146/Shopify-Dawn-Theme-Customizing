@@ -142,6 +142,8 @@
 }
 .card__content a, span{
   font-family: 'YuGothic', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
 }
 .card__content--auto-margins {
   grid-template-rows: minmax(0, auto) max-content minmax(0, auto);
@@ -301,7 +303,7 @@
   }
 
   .underline-links-hover:hover a {
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-offset: 0.3rem;
   }
 }

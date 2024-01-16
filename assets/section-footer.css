@@ -3,12 +3,13 @@
 }
 
 .footer:not(.color-background-1) {
+  background-color: #3A3940;
   border-top: none;
 }
 
 .footer__content-top {
-  padding-bottom: 5rem;
   display: block;
+  max-width: 1270px;
 }
 
 @media screen and (max-width: 749px) {
@@ -43,7 +44,6 @@
 .footer__content-bottom {
   font-family: 'YuGothic', sans-serif;
   /* border-top: solid 0.1rem rgba(var(--color-foreground), 0.08); */
-  padding-top: 4rem;
   padding-bottom: 4rem;
 }
 

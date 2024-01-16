@@ -6,6 +6,7 @@
 
 .banner__box {
   text-align: center;
+  padding: 0 !important;
 }
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
@@ -48,7 +49,34 @@
   position: fixed;
   height: 100vh;
 }
+@media screen and (max-width: 1024px) {
+  .banner--small.banner--mobile-bottom:not(.banner--adapt) .banner__media,
+  .banner--small.banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt) > .banner__media {
+    height: 35rem;
+  }
 
+  .banner--medium.banner--mobile-bottom:not(.banner--adapt) .banner__media,
+  .banner--medium.banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt) > .banner__media {
+    height: 45rem;
+  }
+
+  .banner--large.banner--mobile-bottom:not(.banner--adapt) .banner__media,
+  .banner--large.banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt) > .banner__media {
+    height: 55rem;
+  }
+
+  .banner--small:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+    min-height: 35rem;
+  }
+
+  .banner--medium:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+    min-height: 45rem;
+  }
+
+  .banner--large:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+    min-height: 55rem;
+  }
+}
 @media screen and (max-width: 749px) {
   .banner--small.banner--mobile-bottom:not(.banner--adapt) .banner__media,
   .banner--small.banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt) > .banner__media {
@@ -62,7 +90,7 @@
 
   .banner--large.banner--mobile-bottom:not(.banner--adapt) .banner__media,
   .banner--large.banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt) > .banner__media {
-    height: 39rem;
+    position: absolute;
   }
 
   .banner--small:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
@@ -77,12 +105,7 @@
     min-height: 39rem;
   }
 }
-
-@media screen and (min-width: 750px) {
-  .banner {
-    flex-direction: row;
-  }
-
+@media screen and (min-width: 1440px) {
   .banner--small:not(.banner--adapt) {
     min-height: 42rem;
   }
@@ -93,6 +116,24 @@
 
   .banner--large:not(.banner--adapt) {
     min-height: 72rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .banner--small:not(.banner--adapt) {
+    min-height: 35rem;
+  }
+
+  .banner--medium:not(.banner--adapt) {
+    min-height: 45rem;
+  }
+
+  .banner--large:not(.banner--adapt) {
+    min-height: 55rem;
+  }
+}
+@media screen and (min-width: 750px) {
+  .banner {
+    flex-direction: row;
   }
 
   .banner__content.banner__content--top-left {
@@ -142,6 +183,17 @@
 }
 
 @media screen and (max-width: 749px) {
+  .banner--small:not(.banner--adapt) {
+    min-height: 25rem;
+  }
+
+  .banner--medium:not(.banner--adapt) {
+    min-height: 30rem;
+  }
+
+  .banner--large:not(.banner--adapt) {
+    min-height: 35rem;
+  }
   .banner:not(.banner--stacked) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -158,6 +210,7 @@
 
 .banner__media {
   height: 100%;
+  aspect-ratio: 16/9;
   position: absolute;
   left: 0;
   top: 0;
@@ -207,7 +260,8 @@
 
 @media screen and (min-width: 750px) {
   .banner__media {
-    height: 100%;
+    /* height: 100%; */
+    aspect-ratio: 16/9;
   }
 }
 
@@ -217,6 +271,10 @@
 }
 
 @media screen and (max-width: 749px) {
+  .banner__media {
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
   .banner--mobile-bottom .banner__media,
   .banner--stacked:not(.banner--mobile-bottom) .banner__media {
     position: relative;
