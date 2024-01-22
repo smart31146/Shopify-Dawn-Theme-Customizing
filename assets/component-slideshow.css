@@ -257,3 +257,15 @@ slideshow-component:not(.page-width) .slider-buttons {
   opacity: 0;
   transform: scale(0.8);
 }
+slideshow-component {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    height: 100vh;
+}
+div#shopify-section-template--16398062715064__507ec5e5-f3db-4acf-8253-80f7aab3e665 .multirow-collection__inner {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+}

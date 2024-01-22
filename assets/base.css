@@ -12,7 +12,19 @@
   --alpha-link: 0.85;
   --alpha-badge-border: 0.1;
 }
-
+/* .isPC {
+  text-align: center;
+}
+.isPC .hover01>div {
+  top: -26px !important;
+  left: -142px!important;
+}
+.isPC .hover01>div>div span {
+  left: 0 !important;
+}
+.isPC li:first-child div {
+  width: 20vw !important;
+} */
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);

@@ -1,0 +1,12 @@
+[environments.env1]
+theme = "134067126456"
+store = "1e55c3-4.myshopify.com"
+password  = "shptka_4eefc423cd1ea2c221b5bdf3b94d60f6"
+ignore = "sections/header.liquid"
+[environments.env2]
+store = "another-store"
+path = "./dist"
+ignore = ["sections/announcement-bar.liquid", "sections/header.liquid"]
+output = "json"
+live = true
+allow-live = true

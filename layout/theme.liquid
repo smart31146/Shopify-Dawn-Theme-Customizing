@@ -251,7 +251,14 @@
       }
     {% endstyle %}
 
+{% if template == 'index' %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"
+    />
+{%- endif -%}
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'main.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -348,5 +355,30 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+      <script src="{{ 'main.js' | asset_url }}" defer="defer"></script>
+{% if template == 'index' %}
+<script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.mjs';
+  (function(){
+    const swiper = new Swiper('.swiper', {
+      effect: 'fade',
+      autoplay: true,
+      pagination: true,
+      loop: true,
+      autoplay: {
+        delay: 5000,  // 5秒間隔
+        disableOnInteraction: true,
+      },
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+
+    });
+  })();
+</script>
+{%- endif -%}
   </body>
 </html>

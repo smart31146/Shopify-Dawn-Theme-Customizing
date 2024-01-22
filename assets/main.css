@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+:root,
+::after,
+::before {
+    --header-height:110px;
+}
+
+@media screen and (max-width: 749.98px) {
+   :root,
+    ::after,
+    ::before {
+        --header-height:100px;
+    } 
+}
+
+div#shopify-section-sections--16398058848440__header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    transition: background-color .2s ease;
+}
+
+div#shopify-section-sections--16398058848440__header.nk-scrolled{
+    background-color: #fff;
+}
+
+div#shopify-section-sections--16398058848440__header.nk-hover{
+    background-color: #fff;
+}
+sticky-header.header-wrapper {
+    width: 100%;
+}
+
+#shopify-section-template--16398062715064__slideshow2_QwbbHn .swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#shopify-section-template--16398062715064__slideshow2_QwbbHn .swiper-container .swiper-slide {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+#shopify-section-template--16398062715064__slideshow2_QwbbHn .swiper-container .swiper-slide-hidden {
+  opacity: 0;
+}
+
+#shopify-section-template--16398062715064__slideshow2_QwbbHn .swiper-slide img{
+  /* スライドの初期スケールを設定 */
+  transform: scale(1.25);
+  opacity: 0;
+  transition: transform .8s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#shopify-section-template--16398062715064__slideshow2_QwbbHn .swiper-slide-active img{
+  /* アクティブなスライドをスケールアップ */
+  transform: scale(1);
+  opacity: 1;
+}
+
+#shopify-section-template--16398062715064__slideshow2_QwbbHn {
+    margin-top: calc( var(--header-height) * -1 );
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn .swiper{
+    height: calc(100svh - ( var(--announcement-bar-height,40px)) );
+    max-height: 600px;
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn .sws-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn .sws-content>div{
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn .sws-content{
+
+  transform: translate(0,100%);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  transition-delay: .8s;
+}
+#shopify-section-template--16398062715064__slideshow2_QwbbHn .swiper-slide-active .sws-content{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn .sws-content-ttl {
+    color: #333;
+    font-size: 24px;
+    line-height: 1;
+    font-family: 'Noto Serif JP', serif;
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn .sws-content-desc {
+    font-size: 18px;
+    color: #333;
+    max-width: 20em;
+    line-height: 1.5;
+    margin: 1em 0;
+    font-family: 'Noto Serif JP', serif;
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn .sws-content-button a {
+    background: #fff;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    min-width: 200px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'YuGothic';
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn .swiper-pagination {
+    left: auto;
+    right: 10%;
+    width: auto;
+    bottom: 5%;
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn .swiper-pagination-bullet{
+    width:14px;
+    height:14px;
+}
+
+section#shopify-section-template--16398062715064__slideshow2_QwbbHn span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #fff;
+}

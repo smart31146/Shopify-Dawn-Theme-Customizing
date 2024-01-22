@@ -13,13 +13,11 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -29,11 +27,17 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "settings": {}
+        },
+        "custom_liquid_8nyD4H": {
+          "type": "custom_liquid",
           "settings": {
+            "custom_liquid": "{% if product.metafields.custom.nk_desc %}\n<p class=\"product__text\">\n{{ product.metafields.custom.nk_desc }}\n<\/p>\n{% endif %}"
           }
         },
         "38017866-c301-46e9-98a1-269a67f8d636": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "良質なペカンナッツをこんがりローストし、キャラメルパウダーで包み込みました",
             "text_style": "body"
@@ -43,13 +47,12 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
           }
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "e1588af3-11fb-416b-8cb2-016ba73eee0f": {
           "type": "icon-with-text",
@@ -67,6 +70,7 @@
         },
         "4610729b-b7e3-421b-b440-138464d5fbbe": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "内容・サイズ",
             "icon": "none",
@@ -74,8 +78,15 @@
             "page": "contact"
           }
         },
+        "custom_liquid_gAgwBF": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.nk_size %}\n<div class=\"product__accordion accordion quick-add-hidden\">\n  <details>\n    <summary>\n      <div class=\"summary__title\">\n        <h2 class=\"h4 accordion__title inline-richtext\">\n          内容・サイズ\n        <\/h2>\n      <\/div>\n      {% render 'icon-caret' %}\n    <\/summary>\n    <div class=\"accordion__content rte\">\n      {{ product.metafields.custom.nk_size }}\n    <\/div>\n  <\/details>\n<\/div>\n{% endif %}"
+          }
+        },
         "a47fd516-c8d7-43cc-9990-8263d6f115f8": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "原材料・アレルギー説明",
             "icon": "none",
@@ -83,13 +94,26 @@
             "page": ""
           }
         },
+        "custom_liquid_Ltc9rH": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.nk_ingredients %}\n<div class=\"product__accordion accordion quick-add-hidden\">\n  <details>\n    <summary>\n      <div class=\"summary__title\">\n        <h2 class=\"h4 accordion__title inline-richtext\">\n          原材料・アレルギー説明\n        <\/h2>\n      <\/div>\n      {% render 'icon-caret' %}\n    <\/summary>\n    <div class=\"accordion__content rte\">\n      {{ product.metafields.custom.nk_ingredients }}\n    <\/div>\n  <\/details>\n<\/div>\n{% endif %}"
+          }
+        },
         "b1bdf602-c347-443b-9eb4-a71da425ab00": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "保存方法・賞味期限",
             "icon": "none",
             "content": "<p>【 保存方法 】直射日光、高温多湿を避けて保存。<br\/>【 賞味期限 】製造から60日。パッケージ裏面に記載<\/p>",
             "page": ""
+          }
+        },
+        "custom_liquid_QHJzyp": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.nk_best_before %}\n<div class=\"product__accordion accordion quick-add-hidden\">\n  <details>\n    <summary>\n      <div class=\"summary__title\">\n        <h2 class=\"h4 accordion__title inline-richtext\">\n          保存方法・賞味期限\n        <\/h2>\n      <\/div>\n      {% render 'icon-caret' %}\n    <\/summary>\n    <div class=\"accordion__content rte\">\n      {{ product.metafields.custom.nk_best_before }}\n    <\/div>\n  <\/details>\n<\/div>\n{% endif %}"
           }
         }
       },
@@ -99,13 +123,17 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "custom_liquid_8nyD4H",
         "38017866-c301-46e9-98a1-269a67f8d636",
         "buy_buttons",
         "description",
         "e1588af3-11fb-416b-8cb2-016ba73eee0f",
         "4610729b-b7e3-421b-b440-138464d5fbbe",
+        "custom_liquid_gAgwBF",
         "a47fd516-c8d7-43cc-9990-8263d6f115f8",
-        "b1bdf602-c347-443b-9eb4-a71da425ab00"
+        "custom_liquid_Ltc9rH",
+        "b1bdf602-c347-443b-9eb4-a71da425ab00",
+        "custom_liquid_QHJzyp"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -126,7 +154,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "関連商品",
+        "heading": "こちらも人気です",
         "heading_size": "h2",
         "products_to_show": 5,
         "columns_desktop": 5,
